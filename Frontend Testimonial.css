@@ -4,91 +4,167 @@
     padding: 0;
 }
 
-body {
+.grid_container {
     font-size: 13px;
     font-weight: 500;
     font-family: 'Barlow Semi Condensed', sans-serif;
     max-width: 1440px;
+    padding: 20px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.flex__container {
+.testimonials {
+    box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.24378);
+    border-radius: 8px; 
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+.student_info {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 26px;
-    padding-left: 32px;
 }
 
-.miniflex {
-    display: flex;
-    flex-direction: column;
-    margin-left: 17px;
+.student_info h3 {
+    font-weight: 600;
+    color: #ffff;
+    line-height: 13px;
+}
+
+.student_info p{
+    font-size: 11px;
+    line-height: 11px;
+    opacity: 0.5;
+    color: #ffff;
+}
+
+.student_lead_quote {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.student_lead_quote {
+    color: #ffffff;
+}
+
+#patrick_lead_quote {
+    color: #ecf2f8;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.jonathan_patrick_review_color {
+    color: #ffff;
+    opacity: 0.7; 
 }
 
 img {
+    border:#733fc8 2px solid;
     border-radius: 50%;
-    border: 2px solid #a775f1;
 }
 
-h4 {
-    color: hsl(0, 0%, 100%);
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 600;
-    width: 263px;
-    height: 48px;
-    padding-left: 32px;
+#daniel_review {
+    color: #cfcfcf;
+    opacity: 0.7;
 }
 
-h3 {
- color: hsl(0, 0%, 81%);
- line-height: 13px;
+#daniel-profile-pic {
+    border-color: #a775f1;
 }
 
-.graduate {
-    color: hsl(0, 0%, 81%);
-    opacity: 50%;
-    font-size: 11px;
-    line-height: 11px;
-}
-
-.review {
-    color: hsl(0, 0%, 81%);
-    opacity: 70%;
-    width: 263px;
-    height: 72px;
-    line-height: 18px;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 40px;
-
-}
-
-.student {
-    margin: 24px 24px;
-    width: 327px;
-    height: 444px;
-    border-radius: 8px;
-    box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, .247378);
-}
-
-.student:nth-of-type(1) {
+.testimonials:nth-of-type(1) {
     background-color: #733fc8;
     background-image: url(images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
-    background-position: top right 24px;
-    background-size: 104px 102px;
-
+    background-position: top right 5%;
+    grid-column: 1 / 3;
 }
 
-.student:nth-of-type(2) {
-    background-color: hsl(217, 19%, 35%);
+.testimonials:nth-of-type(2) {
+    background-color: #48556a;
 }
 
-.student:nth-of-type(3)  {
-    background-color: white;
+.testimonials:nth-of-type(4) {
+    background-color: #19202d;
+    grid-row: 2;
+    grid-column: 2 / 4;
+}
+
+/* .testimonials:nth-of-type(3){
+    grid-row: 2 / 4;
+} */
+.testimonials:nth-of-type(3) p{
     color: #48556a;
 }
+
+.testimonials:nth-of-type(5) {
+    grid-column: 4;
+    grid-row: 1 / 3;
+    
+}
+
+.testimonials:nth-of-type(3) h3{
+    color: #48556a;
+}
+
+.testimonials:nth-of-type(3) div{
+    color: #48556a;
+}
+
+.testimonials:nth-of-type(5) p{
+        color: #48556a;
+}
+.testimonials:nth-of-type(5) h3{
+    color: #48556a;
+}
+.testimonials:nth-of-type(5) div {
+    color: #48556a;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (max-width: 390px) {
+    .grid_container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    }
+
+    .testimonials:nth-of-type(1) {
+        grid-column: 1;
+    }
+
+    .testimonials:nth-of-type(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .testimonials:nth-of-type(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .testimonials:nth-of-type(4) {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .testimonials:nth-of-type(5) {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+
+
+}
+
+
+
+
+
 
 
 
